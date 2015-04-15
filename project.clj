@@ -5,19 +5,29 @@
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2755"]]
 
-  :node-dependencies [[source-map-support "0.2.8"]]
+  ;;:node-dependencies [[source-map-support "0.2.8"]]
 
-  :plugins [[lein-cljsbuild "1.0.4"]
-            [lein-npm "0.4.0"]]
+  :plugins [
+            [lein-cljsbuild "1.0.4"]
+            ;;[lein-npm "0.4.0"]
+            ]
 
   :source-paths ["src"]
 
   :cljsbuild {
-    :builds [{:id "node-cljs-demo"
+    :builds [{:id "dev"
               :source-paths ["src"]
               :compiler {
-                :output-to "out/node-cljs-demo.js"
-                :output-dir "out"
+                :output-to "out-dev/node-cljs-demo.js"
+                :output-dir "out-dev"
                 :target :nodejs
                 :optimizations :none
-                :source-map true}}]})
+                :source-map true}}
+              {:id "prod"
+                :source-paths ["src"]
+                :compiler {
+                  :output-to "index.js"
+                  :output-dir "out-prod"
+                  :target :nodejs
+                  :optimizations :advanced}}
+                ]})

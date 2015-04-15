@@ -32,8 +32,7 @@ scripts/repl
 
 ```clojure
 (require '[node-cljs-demo.core :as core] :reload)
-(core/fn)
-(core/ex)
+(core/ ... )
 ```
 
 Node REPL
@@ -43,7 +42,6 @@ Node REPL
 node
 ```
 ```javascript
-var core = require('run.js');
-core.fn();
-core.ex();
+var core = require('./index-dev');
+core. ...
 ```

@@ -1,8 +1,9 @@
+node_modules/
 pom.xml
 *jar
 /lib/
 /classes/
-/out/
+/out-*/
 /target/
 .lein-deps-sum
 .lein-repl-history

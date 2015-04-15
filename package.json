@@ -2,7 +2,13 @@
   "name": "node-cljs-demo",
   "version": "0.0.0",
   "description": "Node ClojureScript Demo",
-  "main": "run.js",
+  "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "~2.0.0"
+  },
+  "devDependencies": {
+    "source-map-support": "~0.2.10"
+  }
 }
