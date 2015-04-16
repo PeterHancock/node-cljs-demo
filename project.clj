@@ -26,8 +26,12 @@
               {:id "prod"
                 :source-paths ["src"]
                 :compiler {
-                  :output-to "index.js"
+                  :output-to "main.js"
                   :output-dir "out-prod"
                   :target :nodejs
-                  :optimizations :advanced}}
+                  :optimizations :simple
+                  :pretty-print true }
+
+            }
+
                 ]})

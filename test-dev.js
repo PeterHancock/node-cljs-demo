@@ -1,6 +1,8 @@
 
 var my_lib = require('./index-dev');
 
+console.log(my_lib);
+
 my_lib.fn();
 
 my_lib.fn2();

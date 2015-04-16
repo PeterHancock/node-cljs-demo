@@ -1,6 +1,7 @@
+my_lib = require('./index');
 
 
-var my_lib = require('./index');
+
 console.log(my_lib)
 
 my_lib.fn();
