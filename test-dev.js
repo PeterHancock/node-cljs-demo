@@ -1,14 +1,11 @@
 
-var my_lib = require('./index-dev');
+var core = require('./index-dev');
 
-console.log(my_lib);
+console.log(core);
 
-my_lib.fn();
+console.log(core.fun());
 
-my_lib.fn2();
+console.log(core.render("template {{view}}", {view: "rendered!"}));
 
-//try {
-    my_lib.ex();
-//} catch (e) {
-//    console.error(e);
-//}
+//Test source map support
+core.ex();

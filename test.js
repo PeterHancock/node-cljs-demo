@@ -1,15 +1,11 @@
-my_lib = require('./index');
+core = require('./index');
 
+console.log(core);
 
+console.log(core);
 
-console.log(my_lib)
+console.log(core.fun());
 
-my_lib.fn();
+console.log(core.render("template {{view}}", {view: "rendered!"}));
 
-my_lib.fn2();
-
-//try {
-    my_lib.ex();
-//} catch (e) {
-//    console.error(e);
-//}
+core.ex();

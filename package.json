@@ -12,6 +12,8 @@
     "source-map-support": "~0.2.10"
 },
   "scripts": {
-      "build": "./build.sh"
+      "build": "./build.sh",
+      "cljs-repl": "scripts/repl"
   }
+
 }

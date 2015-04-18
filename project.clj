@@ -1,16 +1,11 @@
 (defproject node-cljs-demo "0.1.0-SNAPSHOT"
-  :description "FIXME: write this!"
+  :description "Let's create a node module"
   :url "http://example.com/FIXME"
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2755"]]
 
-  ;;:node-dependencies [[source-map-support "0.2.8"]]
-
-  :plugins [
-            [lein-cljsbuild "1.0.4"]
-            ;;[lein-npm "0.4.0"]
-            ]
+  :plugins [ [lein-cljsbuild "1.0.4"] ]
 
   :source-paths ["src"]
 
@@ -22,16 +17,18 @@
                 :output-dir "out-dev"
                 :target :nodejs
                 :optimizations :none
-                :source-map true}}
-              {:id "prod"
-                :source-paths ["src"]
-                :compiler {
-                  :output-to "main.js"
-                  :output-dir "out-prod"
-                  :target :nodejs
-                  :optimizations :simple
-                  :pretty-print true }
-
+                :source-map true
+                }
             }
-
-                ]})
+            {:id "release"
+              :source-paths ["src"]
+              :notify-command ["./build.sh"]
+              :compiler {
+                :output-to "out-release/node-cljs-demo.js"
+                :output-dir "out-release"
+                :target :nodejs
+                :optimizations :simple
+              }
+            }]
+    }
+)
