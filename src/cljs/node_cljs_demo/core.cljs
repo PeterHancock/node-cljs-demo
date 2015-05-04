@@ -15,4 +15,4 @@
 
 (defn -main [] nil)
 
-(set! *main-cli-fn* #( )) ;; -main a node app
+(set! *main-cli-fn* #()) ;; -main a node app

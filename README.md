@@ -9,8 +9,8 @@ DEV INSTALL
 -------
 
 ```
-lein npm install
-lein cljsbuild auto
+npm install
+npm run build:dev
 ```
 
 
@@ -27,7 +27,7 @@ scripts/repl.clj
 To run do
 
 ```
-scripts/repl
+npm run cljs-repl
 ```
 
 ```clojure

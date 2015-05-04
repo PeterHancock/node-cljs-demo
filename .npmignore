@@ -1,4 +1,4 @@
-node_modules/
+#cljs
 pom.xml
 *jar
 /lib/
@@ -9,3 +9,10 @@ pom.xml
 .lein-repl-history
 .lein-plugins/
 
+#dev
+index-dev.js
+
+#test
+src/cljs/
+scripts/
+project.clj

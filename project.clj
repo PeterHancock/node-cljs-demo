@@ -11,9 +11,9 @@
 
   :cljsbuild {
     :builds [{:id "dev"
-              :source-paths ["src"]
+              :source-paths ["src/cljs"]
               :compiler {
-                :output-to "out-dev/node-cljs-demo.js"
+                :output-to "out-dev/index.js"
                 :output-dir "out-dev"
                 :target :nodejs
                 :optimizations :none
@@ -21,13 +21,12 @@
                 }
             }
             {:id "release"
-              :source-paths ["src"]
-              :notify-command ["./build.sh"]
+              :source-paths ["src/cljs"]
               :compiler {
-                :output-to "out-release/node-cljs-demo.js"
-                :output-dir "out-release"
+                :output-to "index.js"
                 :target :nodejs
                 :optimizations :simple
+                :pretty-print true
               }
             }]
     }
